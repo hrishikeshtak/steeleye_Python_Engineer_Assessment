@@ -75,7 +75,7 @@ def lambda_handler(event, context):
     bucket_name = event.get('bucketname')
     output_json_filename = event.get(
                 'output_json_filename',
-                'Hrishikesh_Python_Engineer_Assessment_output')
+                'Hrishikesh_Python_Engineer_Assessment_output.json')
     # upload json result_data to s3 bucket
     s3.Bucket(bucket_name).put_object(
         Key=output_json_filename,
